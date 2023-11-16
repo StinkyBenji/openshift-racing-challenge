@@ -2,8 +2,8 @@ runtime:
   cache_dir: ./.cache/antora
 
 site:
-  title: Template Tutorial
-  url: https://redhat-scholars.github.io/course-template
+  title: OpenShift Racing Challenge
+  url: https://github.com/StinkyBenji/openshift-racing-challenge
   start_page: template-tutorial::index.adoc
 
 content:
