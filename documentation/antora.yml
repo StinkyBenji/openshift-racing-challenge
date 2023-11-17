@@ -1,5 +1,5 @@
-name: template-tutorial
-title: Template Tutorial
+name: OpenShift Racing Challenge
+title: OpenShift Racing Challenge
 version: master
 nav:
   - modules/ROOT/nav.adoc
