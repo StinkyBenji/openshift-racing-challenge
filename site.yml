@@ -4,7 +4,7 @@ runtime:
 site:
   title: OpenShift Racing Challenge
   url: https://github.com/StinkyBenji/openshift-racing-challenge
-  start_page: template-tutorial::index.adoc
+  start_page: Tasks::index.adoc
 
 content:
   sources:
