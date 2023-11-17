@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OpenShift Racing Challenge :: OpenShift Racing Challenge</title>
+    <link rel="canonical" href="https://github.com/StinkyBenji/openshift-racing-challenge/OpenShift%20Racing%20Challenge/index.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img src="../_/img/NewRHDFullLogo_4-color_white-wordmark.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://github.com/StinkyBenji/openshift-racing-challenge">OpenShift Racing Challenge</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://developers.redhat.com/ebooks/" target="_blank">Books</a>
+        <a class="navbar-item" href="https://developers.redhat.com/cheatsheets/" target="_blank">Cheat Sheets</a>
+        <a class="navbar-item" href="https://developers.redhat.com/events/" target="_blank">Upcoming Events</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/kubernetes-tutorial/" target="_blank">Kubernetes</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/istio-tutorial/" target="_blank">Istio</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/quarkus-tutorial/" target="_blank">Quarkus</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/knative-tutorial/" target="_blank">Knative</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/tekton-tutorial/" target="_blank">Tekton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="OpenShift Racing Challenge" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Challenge</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#prerequisite">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#tasks">Tasks</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">OpenShift Racing Challenge</a></li>
+    <li><a href="index.html">Challenge</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/StinkyBenji/openshift-racing-challenge/edit/master/documentation/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">OpenShift Racing Challenge</h1>
+<div class="sect1">
+<h2 id="prerequisite"><a class="anchor" href="#prerequisite"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following CLI tools are required for accomplishing the tasks in this challenge.
+Please have them installed and configured before you get started with any of the tasks.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Tool</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Installation Doc</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>git</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://git-scm.com/download">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>skopeo</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/containers/skopeo/blob/main/install.md">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>oc</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/4.13/cli_reference/openshift_cli/getting-started-cli.html">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>helm</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://helm.sh/docs/intro/install/">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>ansible</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#pipx-install">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>kubeseal</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/bitnami-labs/sealed-secrets#kubeseal">Download</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tasks"><a class="anchor" href="#tasks"></a>Access to OpenShift</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You will get the details of the OpenShift environment from your team facilitator.
+After gaining the access, please login to your OpenShift cluster and start the tasks.</p>
+</div>
+<div class="paragraph">
+<p>✅ Operator Installation</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Operator</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Channel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code><a href="https://docs.openshift.com/gitops/1.10/installing_gitops/preparing-gitops-install.html">OpenShift GitOps</a></code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">latest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code><a href="https://docs.openshift.com/pipelines/1.12/install_config/installing-pipelines.html">OpenShift Pipelines</a></code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">latest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code><a href="https://www.redhat.com/en/resources/amq-streams-datasheet">AMQ Streams</a></code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code><a href="https://github.com/bitnami-labs/sealed-secrets#installation">Sealed Secrets</a></code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">*</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="content">
+<pre>🥸 HINT: please follow the https://github.com/bitnami-labs/sealed-secrets#installation[instructions] to install sealed-secrets controller in `kube-system` namespace via Helm Chart.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>👻 BONUS TASK: consider different ways to install operators on OpenShift, and explain the different methods to the facilitator to get the points.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>✅ Grant <strong>cluster-admin</strong> to OpenShift GitOps application controller service account</p>
+</div>
+<div class="paragraph">
+<p>✅ Deploy <strong>reloader</strong> Helm Chart</p>
+</div>
+<div class="paragraph">
+<p>Follow the command:</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm repo add stakater <a href="https://stakater.github.io/stakater-chart" class="bare">https://stakater.github.io/stakater-chart</a>
+helm repo update
+helm install reloader stakater/reloader -n reloader --set reloader.isOpenshift=true --set reloader.deployment.securityContext.runAsUser=null --create-namespace</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3>🔥 <strong>The challenge is getting real</strong></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+the GitHub and Quay Setup can be done in parallel
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3>GitHub SetUp</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fork the Git repo: <a href="https://github.com/StinkyBenji/quinoa-wind-turbine-manifests" class="bare">https://github.com/StinkyBenji/quinoa-wind-turbine-manifests</a></p>
+</li>
+<li>
+<p>And fork the Git repo: <a href="https://github.com/StinkyBenji/quinoa-wind-turbine" class="bare">https://github.com/StinkyBenji/quinoa-wind-turbine</a></p>
+</li>
+<li>
+<p>After you forked the repo, please run:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone &lt;your-forked-repos&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">fine-grained personal access token</a> (one token is enough for one team)</p>
+</li>
+<li>
+<p>Give the following permissions to your token:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read Only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read Only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read and Write</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Commit Statuses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read and Write</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Push</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read and Write</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Webhooks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read and Write</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Ideally, set repository access to only select repositories, and select the repositories that you just forked</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>❗❗❗Save your token to a safe place!</p>
+</div>
+</div>
+<div class="sect2">
+<h3>Quay SetUp</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a <a href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.3/html/use_red_hat_quay/use-quay-manage-repo#allow-robot-access-user-repo">robot account</a></p>
+</li>
+<li>
+<p>Once the robot account is ready, click on the account and copy/download the Kubernetes Secret credentials</p>
+</li>
+<li>
+<p>Use <code>skopeo copy</code> to mirror the container image to your own quay registry:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>skopeo copy docker://quay.io/stbenji/quinoa-wind-turbine docker://quay.io/&lt;your-account&gt;/quinoa-wind-turbine</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add the robot account to the image repository and give it <strong>Write</strong> permission</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3>Racing car deployment</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Create the namespace: <strong>quinoa-wind-turbine</strong></p>
+</li>
+<li>
+<p>The following steps will be executed in the same namespace</p>
+</li>
+<li>
+<p>Update the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-github-secret-tmpl.yaml">0-github-secret-tmpl.yaml</a> to create a secret named <code>git-user-pass</code></p>
+</li>
+<li>
+<p>Update the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-quay-secret-tmpl.yaml">0-quay-secret-tmpl</a> to create a secret named <code>quay-push-secret</code></p>
+</li>
+<li>
+<p>Link both secret to <code>pipeline</code> service account</p>
+<div class="literalblock">
+<div class="content">
+<pre>🥸 HINT: `oc secret link`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Go to the cloned <strong>quinoa-wind-turbine-manifests</strong> repo directory on your local machine</p>
+</li>
+<li>
+<p>(provided that you are logged in to OpenShift on your local as well)</p>
+</li>
+<li>
+<p>Use the following command to create the deployment secret:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>helm template helm -n quinoa-wind-turbine --set disableSecretsDeployment=false -s templates/env/secret.yaml | kubeseal -n quinoa-wind-turbine  - &gt; config/sealedsecret.yaml
+
+oc apply -f config/sealedsecret.yaml</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create the argocd application using the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/wind-turbine-app-tmpl.yaml">wind-turbine-app-tmpl.yaml</a></p>
+</li>
+<li>
+<p>Once you are sure that all the components of the application is running smoothly, use the following command to get the route of the racing car game:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo "The dashboard link: https://$(oc get route quinoa-wind-turbine -o jsonpath='{.spec.host}{"\n"}' -n quinoa-wind-turbine)/dashboard"
+
+echo "The game link: https://$(oc get route quinoa-wind-turbine -o jsonpath='{.spec.host}{"\n"}' -n quinoa-wind-turbine)"</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open a web browser to access the dashboard link to start the game</p>
+</li>
+<li>
+<p>Use your mobile to access the game link to play the game</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3>👻 BONUS TASK 1</h3>
+<div class="paragraph">
+<p>GitHub setup:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the foked <strong>quinoa-wind-turbine</strong> repo and create a webhook in your GitHub repository</p>
+</li>
+<li>
+<p>Go to Repository &#8594; Settings &#8594; Webhooks &#8594; Add webhook</p>
+</li>
+<li>
+<p>Payload URL:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo "https://$(oc get route el-wind-turbine -o jsonpath='{.spec.host}{"\n"}' -n quinoa-wind-turbine)"</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content type: <code>application/json</code></p>
+</li>
+<li>
+<p>You can ignore the secret field</p>
+</li>
+<li>
+<p>Just push event is enough</p>
+</li>
+<li>
+<p>Create the webhook</p>
+</li>
+<li>
+<p>Change <code>const</code> in the <code>src/main/webui/src/Config.js</code>
+e.g. `export const ENABLE_SHAKING = true; // "false" `</p>
+</li>
+<li>
+<p>Commit and push the change</p>
+</li>
+<li>
+<p>Observe the <code>pipelineruns</code> in the namespace</p>
+</li>
+<li>
+<p>Observe the Argo CD application rollout</p>
+</li>
+<li>
+<p>Reload the game when the application is ready</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3>👻 BONUS TASK 2</h3>
+<div class="paragraph">
+<p>If you need to automate the whole deployment process (Of course, some manual steps, e.g. GitHub token creation and Quay robot account creation, are inevitable), how would the implementation look like?
+- Being able to explain the idea is enough for this task
+- If the team can present the idea with a small design, the extra points will be granted.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>THE END</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2>Thank you so much for participating!!</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
