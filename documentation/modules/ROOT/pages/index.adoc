@@ -77,10 +77,10 @@ helm repo update
 helm install reloader stakater/reloader -n reloader --set reloader.isOpenshift=true --set reloader.deployment.securityContext.runAsUser=null --create-namespace
 ----	
 
-=== 🔥 *The challenge is getting real*
+== 🔥 *The challenge is getting real*
 NOTE: the GitHub and Quay Setup can be done in parallel
 
-=== GitHub SetUp
+== GitHub SetUp
 - Fork the Git repo: https://github.com/StinkyBenji/quinoa-wind-turbine-manifests
 
 - And fork the Git repo: https://github.com/StinkyBenji/quinoa-wind-turbine
@@ -106,7 +106,7 @@ git clone <your-forked-repos>
 
 ❗❗❗Save your token to a safe place!
 
-=== Quay SetUp
+== Quay SetUp
 
 - Create a https://access.redhat.com/documentation/en-us/red_hat_quay/3.3/html/use_red_hat_quay/use-quay-manage-repo#allow-robot-access-user-repo[robot account] 
 - Once the robot account is ready, click on the account and copy/download the Kubernetes Secret credentials 
@@ -118,7 +118,7 @@ skopeo copy docker://quay.io/stbenji/quinoa-wind-turbine docker://quay.io/<your-
 ----
 - Add the robot account to the image repository and give it *Write* permission
 
-=== Racing car deployment
+== Racing car deployment
 - Create the namespace: *quinoa-wind-turbine*
 - The following steps will be executed in the same namespace
 - Update the https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-github-secret-tmpl.yaml[0-github-secret-tmpl.yaml] to create a secret named `git-user-pass`
@@ -151,7 +151,7 @@ echo "The game link: https://$(oc get route quinoa-wind-turbine -o jsonpath='{.s
 - Open a web browser to access the dashboard link to start the game
 - Use your mobile to access the game link to play the game
 
-===  👻 BONUS TASK 1
+==  👻 BONUS TASK 1
 
 GitHub setup:
 
@@ -174,13 +174,14 @@ e.g. `export const ENABLE_SHAKING = true; // "false" `
 - Observe the Argo CD application rollout
 - Reload the game when the application is ready
 
-===  👻 BONUS TASK 2
+==  👻 BONUS TASK 2
 If you need to automate the whole deployment process (Of course, some manual steps, e.g. GitHub token creation and Quay robot account creation, are inevitable), how would the implementation look like? 
 - Being able to explain the idea is enough for this task
 - If the team can present the idea with a small design, the extra points will be granted.
 
-== THE END
-== Thank you so much for participating!!
+== THE END 🥳 🥳 🥳
+
+== Thank you so much for participating!! 🎉🎉🎉
 
 
 
