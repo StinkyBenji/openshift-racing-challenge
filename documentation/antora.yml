@@ -1,7 +1,5 @@
 name: OpenShift Racing Challenge
 title: OpenShift Racing Challenge
 version: master
-nav:
-  - modules/ROOT/nav.adoc
 
 start_page: ROOT:index.adoc
