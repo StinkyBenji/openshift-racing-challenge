@@ -312,13 +312,13 @@ the GitHub and Quay Setup can be done in parallel
 <p>Update the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-github-secret-tmpl.yaml">0-github-secret-tmpl.yaml</a> to create a secret named <code>git-user-pass</code></p>
 </li>
 <li>
-<p>Update the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-quay-secret-tmpl.yaml">0-quay-secret-tmpl</a> to create a secret named <code>quay-push-secret</code></p>
+<p>Update the <a href="https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-quay-secret-tmpl.yaml">0-quay-secret-tmpl.yaml</a> to create a secret named <code>quay-push-secret</code></p>
 </li>
 <li>
 <p>Link both secret to <code>pipeline</code> service account</p>
 <div class="literalblock">
 <div class="content">
-<pre>🥸 HINT: `oc secret link`</pre>
+<pre>🥸 HINT: *oc secret link*</pre>
 </div>
 </div>
 </li>
@@ -409,7 +409,7 @@ echo "The game link: https://$(oc get route quinoa-wind-turbine -o jsonpath='{.s
 </li>
 <li>
 <p>Change <code>const</code> in the <code>src/main/webui/src/Config.js</code>
-e.g. `export const ENABLE_SHAKING = true; // "false" `</p>
+e.g. <code>export const ENABLE_SHAKING = true; // "false"</code></p>
 </li>
 <li>
 <p>Commit and push the change</p>
