@@ -122,10 +122,10 @@ skopeo copy docker://quay.io/stbenji/quinoa-wind-turbine docker://quay.io/<your-
 - Create the namespace: *quinoa-wind-turbine*
 - The following steps will be executed in the same namespace
 - Update the https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-github-secret-tmpl.yaml[0-github-secret-tmpl.yaml] to create a secret named `git-user-pass`
-- Update the https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-quay-secret-tmpl.yaml[0-quay-secret-tmpl] to create a secret named `quay-push-secret` 
+- Update the https://raw.githubusercontent.com/StinkyBenji/quinoa-wind-turbine-manifests/main/0-quay-secret-tmpl.yaml[0-quay-secret-tmpl.yaml] to create a secret named `quay-push-secret` 
 - Link both secret to `pipeline` service account 
  
- 🥸 HINT: `oc secret link`
+ 🥸 HINT: *oc secret link*
 
 - Go to the cloned *quinoa-wind-turbine-manifests* repo directory on your local machine
 - (provided that you are logged in to OpenShift on your local as well)
@@ -168,7 +168,7 @@ echo "https://$(oc get route el-wind-turbine -o jsonpath='{.spec.host}{"\n"}' -n
 - Just push event is enough
 - Create the webhook
 - Change `const` in the `src/main/webui/src/Config.js`
-e.g. `export const ENABLE_SHAKING = true; // "false" `
+e.g. `export const ENABLE_SHAKING = true; // "false"`
 - Commit and push the change
 - Observe the `pipelineruns` in the namespace 
 - Observe the Argo CD application rollout
