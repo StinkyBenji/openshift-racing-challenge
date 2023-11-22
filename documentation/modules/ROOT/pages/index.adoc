@@ -70,7 +70,7 @@ After gaining the access, please login to your OpenShift cluster and start the t
 Follow the command:
 
 [.console-output]
-[source,bash,subs="attributes+,+macros"]	
+[source,bash]	
 ----	
 helm repo add stakater https://stakater.github.io/stakater-charts
 helm repo update
